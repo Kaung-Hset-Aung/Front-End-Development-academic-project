@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* Styles and layout CSS for aboutme.html */
+
+/* Styles for navigation bar */
+nav ul#menu li a#aboutMe {
+    background-image: url(../graphicPhotos/tabnot1.png); /*Different backgroung images with respective settings are assigned for each active navigation tab */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
+
+/* Styles for author's image  */
+img.author {
+    display: block;
+    margin-right: 40px;
+    margin-left: 30px;
+    width: 35%;
+    padding-bottom: 4.5px;
+    float: left;
+    transition: transform 0.3s;
+}
+img.author:hover{
+    transform:scale(1.03); /*Image set to scale when hover*/
+}
+
+/*Modifying list styles in the <aside> tag*/
+ul#eduBG {
+    list-style-image: url(../graphicPhotos/edubulletsmall.png); /* Source of graduation hat image - https://pngtree.com/free-png-vectors/graduation-cap */
+}
+ul#archiBG {
+    list-style-image: url(../graphicPhotos/achibulletsmall.png); /* Source of trophy image - https://pngtree.com/so/trophy */
+}
+
+/*Modifying all contents of <article> tag*/
+article::first-line {
+    font-variant: small-caps;
+    color: darkgreen;
+}
+article h1 {
+    padding-top: 108px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    line-height: 1.5em;
+}
+article p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+h1 strong {
+    color: red;
+}
+
+/* Modifying aside h2 */
+aside h2 {
+    color: darkgreen;
+}
+
+/*Modifying the contents of aside#edu*/
+aside#edu {
+    padding: 40px;
+    text-align: justify;
+}
+aside#edu h2 {
+    line-height: 3em;
+}
+aside#edu ul {
+    line-height: 2em;
+}
+
+/*Modifying the contents of aside#archi*/
+aside#achi {
+    padding: 10px;
+    padding-top: 40px;
+    text-align: justify;
+}
+aside#achi h2 {
+    line-height: 3em;
+}
+aside#achi ul {
+    line-height: 2em;
+}
+a#afmam {
+    color: black;
+}
+
+
+/* layouts  */
+/* Grid declared with 2 colums, each as wide as 50% of the webpage. Grip-gap is added as required */
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Assigning grid location */
+header {
+    grid-column: 1/-1; /*Header is span horizontally across the page and takes row1*/
+    grid-row: 1;
+}
+article {
+    grid-column: 1/-1; /*Article is span horizontally across the page and take row2*/
+    grid-row: 2;
+    margin-left: 40px;
+    margin-right: 20px;
+    border-bottom: solid 3px darkgreen;
+}
+aside#edu {
+    grid-column: 1; /*aside#edu, containing author's education background is assigned to the third row, first column of the grid*/
+    grid-row: 3;
+}
+aside#archi {
+    grid-column: 2; /*aside#archi, containing author's achievements is assigned to the third row, second column of the grid*/
+    grid-row: 3;
+}
+footer {
+    grid-column: 1/-1; /*Footer is spaned horizontally across the page and takes row 4*/
+    grid-row: 4;
+}

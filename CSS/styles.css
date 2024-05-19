@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* General styles and layout CSS for all three pages */
+
+/* pre setting all dafult padding and margins to 0 */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* General setting for <html> tag */
+html {
+    background-image: url(../graphicPhotos/bg.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* General setting for <body> tag */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    min-width: 500px;
+    width: 95%;
+}
+
+/* header image styles  */
+body header img {
+    display: block;
+    width: 100%;
+    align-self: center;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* General navigation list styles  */
+nav ul#menu li {
+    display: block;
+    float: left; 
+    width: 33%;
+    line-height: 40px;
+    border-radius: 25px;
+    border: solid;
+    border-color:#EBDBCD;
+    
+}
+nav ul#menu li a{
+    text-decoration: none;
+    color: black;	
+	display: block;
+	height: 2.5em;	
+	text-align: center;
+}
+
+/* General hover styles for three navigation tabs */
+nav ul#menu li a#index:hover {
+    background-image: url(../graphicPhotos/tab1.png);
+    border-radius: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav ul#menu li a#aboutMe:hover {
+    background-image: url(../graphicPhotos/tabnot1.png);
+    border-radius: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav ul#menu li a#spActions:hover {
+    background-image: url(../graphicPhotos/tab3.png);
+    border-radius: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* General footer styles */
+footer {
+    background-image: url(../graphicPhotos/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: small;
+}
+footer a {
+    text-decoration: none;
+}

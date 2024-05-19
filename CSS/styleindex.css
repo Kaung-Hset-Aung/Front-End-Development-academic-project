@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* Styles and layout CSS for index.html */
+
+/* Styles for navigation bar */
+nav ul#menu li a#index {
+   background-image: url(../graphicPhotos/tab1.png); /*Different backgroung images with respective settings are assigned for each active navigation tab */
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 25px;
+}
+
+/*Styles are set to the first letters of all <p> tags*/
+p::first-letter {
+   font-size: 200%;
+   color: darkgreen;
+}
+
+/* All images are set a boder radius and box-shadow, while the width is set to 90% of the grid width */
+div img {
+   display: block;
+   width: 90%;
+   border-radius: 15px 50px 30px ;
+   box-shadow: 12px 10px 5px 0px rgba(0,0,0,0.3);
+   filter: opacity(90%);
+}
+.po2 { 
+   background-color: rgba(0,0,0,0.3);
+   padding-bottom: 10px;
+}
+aside img{
+   display: block;
+   width: 90%;
+   align-self: center;
+   margin-top: 20px;
+   border-radius: 50px 15px 50px 30px;
+   box-shadow: -12px 10px 5px 0px rgba(0,0,0,0.3);
+   filter: hue-rotate(30deg);
+}
+
+/* Modifying a two <h2> tags in the page body by setting a color and required padding spaces */
+h2#pollution{
+   color: darkgreen;
+   padding-top: 30px;
+   padding-bottom: 15px;
+   font-variant: small-caps;
+}
+h2#role {
+   color: red;
+   padding-top: 30px;
+   padding-bottom: 15px;
+   font-variant: small-caps;
+}
+
+
+/* layouts  */
+/* Grid declared with 2 colums, each as wide as 50% of the webpage */
+body {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+}
+
+/* Assigning grid location */
+header {
+   grid-column: 1/-1; /*Header is spaned horizontally across the page and take row1 */
+   grid-row: 1;
+}
+footer {
+   grid-column: 1/-1; /*Footer is spaned horizontally across the page and take row4*/
+   grid-row: 4;
+}
+article.text {
+   grid-column: 1; /*article.text is assigned at the second row first column of the grid. Suitable setting and paddings are added to allign properly with the picture beside*/
+   grid-row: 2;
+   padding-top: 20px;
+   padding-right: 30px;
+   text-align: justify;
+}
+div {
+   grid-column: 1; /*article.figure, containing 2 pictures is assigned to third row, first column of the grid. Suitable padding is added to allign properly with the picture beside */
+   grid-row: 3;
+   padding-top: 20px;
+}
+aside.figure{
+   grid-column: 2; /*aside.figure, containing a picture is assigned to the second row, second column of the grid. Suitable paddings and margins are added to allign properly with the text beside*/
+   grid-row: 2;
+   padding-top: 40px;
+   padding-bottom: 20px;
+   margin-right: 0px;
+   padding-right: 0px;
+   padding-left: 20px;
+   margin-bottom: 10px;
+}
+aside.text {
+   grid-column: 2; /*aside.text is added to the third row, second column of the grid. Suitable setting and paddings are added to align properly with the image beside */
+   grid-row: 3;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   text-align: justify;
+}
